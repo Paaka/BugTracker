@@ -5,10 +5,13 @@ import LoggingImg from '../../Assets/Images/Logging.jpg';
 import StyledLink from '../../Components/atoms/typography/StyledLink/StyledLink';
 import MainInput from '../../Components/molecules/MainInput/MainInput';
 import DivImage from '../../Components/atoms/DivImage/DivImage';
+import FlexWrapper from '../../Components/atoms/FlexWrapper/FlexWrapper';
 
 import UserIcon from '../../Assets/SVG/user.svg';
 import PasswordIcon from '../../Assets/SVG/padlock.svg';
 import BugIcon from '../../Assets/SVG/bug-report.svg';
+import Button from '../../Components/atoms/Button/Button';
+
 
 const Wrapper = styled.div`
     width:100vw;
@@ -59,14 +62,16 @@ const LoginView = () => {
                     <StyledLink to="/register">Create an account</StyledLink>
                    </FirstGridContainer>
                    <SecondGridContainer>
-                        <div>    
+                        <FlexWrapper isCenter>    
                             <Heading fontSize="3em">Bug Tracker</Heading>
                             <DivImage bgIcon={BugIcon} width="3em" height="3em" bgSize="2.5em" />
-                        </div>
+                        </FlexWrapper>
                         <Heading fontSize="3em">Log in</Heading>
                         <form>
                             <MainInput type="email" placeholder="Email" icon={UserIcon}/>
                             <MainInput type="password" placeholder="Password" icon={PasswordIcon}/>
+                            <input type="checkbox" /> <label>remeber me</label>
+                            <Button>Log in</Button>
                         </form>
                    </SecondGridContainer>
                 </GridWrapper>
