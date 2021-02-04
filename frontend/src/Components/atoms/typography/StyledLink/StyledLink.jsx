@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const StyledLink = styled(Link)`
     font-family:${({theme})=> theme.fonts.montserrat.name};
     color:black;
-    font-size:1.2em;
+    font-size:${({fontSize}) => fontSize ? fontSize : '1.2em'};
     margin:${({margins}) => margins ? margins : 0 };
 `
 

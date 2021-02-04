@@ -6,6 +6,16 @@ const Container = styled.div`
     align-items:${({isCenter})=> isCenter ? 'center' : 'flex-start'};
 `
 
-const FlexWrapper = ({children, isCenter}) => <Container isCenter={isCenter}>{children}</Container>;
+const FlexWrapper = ({children, onClickFn, isCenter}) =>{
+    
+    const onClickHandler = () => {
+
+        if(onClickFn !== undefined){
+            onClickFn();
+        }
+    }
+
+    return <Container onClick={onClickHandler} isCenter={isCenter}>{children}</Container>;
+} 
 
 export default FlexWrapper;

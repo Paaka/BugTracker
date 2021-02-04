@@ -9,6 +9,7 @@ const Container = styled.div`
     background-repeat:no-repeat;
     background-position-x:center;
     background-position-y:center;
+    margin-left:${({marginLeft}) => marginLeft};
 `
 
 const DivImage = (
@@ -16,12 +17,14 @@ const DivImage = (
                 height="30px",
                 width="30px",
                 bgSize="25px",
+                marginLeft="0px"
                 }) => {
                         return <Container 
                                     height={height} 
                                     width={width} 
                                     bgSize={bgSize} 
-                                    icon={bgIcon} />   
+                                    icon={bgIcon}
+                                    marginLeft={marginLeft} />   
 }
 
 export default DivImage;

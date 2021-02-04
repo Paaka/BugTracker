@@ -7,18 +7,24 @@ const StyledParagraph = styled.p`
     font-size:${({theme, fontSize}) => fontSize ? fontSize : theme.fontSizes.medium};
     font-weight:${({theme, fontWeight}) => fontWeight ? fontWeight : theme.fonts.raleway.weights.regular};
     color:${({fontColor})=> fontColor ? fontColor : "black"};
+    margin-left:${({marginLeft})=> marginLeft ? marginLeft : 'none'};
     padding:0;
     margin:0;
+    cursor: ${({cursor})=> cursor ? cursor : 'default'};
 `;
 
 const Paragraph = (
                    {children,
                     fontSize,
                     fontWeight,
-                    fontColor}
+                    fontColor,
+                    marginLeft,
+                    cursor}
                   ) => (<StyledParagraph 
                             fontSize={fontSize}
                             fontWeight={fontWeight}
-                            fontColor={fontColor}>{children}</StyledParagraph>);
+                            fontColor={fontColor}
+                            marginLeft={marginLeft}
+                            cursor={cursor}>{children}</StyledParagraph>);
 
 export default Paragraph;
