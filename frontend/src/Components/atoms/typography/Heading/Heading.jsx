@@ -8,14 +8,16 @@ const StyledHeading = styled.h3`
     color:${({fontColor})=> fontColor ? fontColor : "black"};
     padding:0;
     margin:0;
+    margin-left:${({mLeft})=> mLeft};
 `
 
 
-const Heading = ({children, fontColor, fontSize, fontWeight}) => {
+const Heading = ({children, fontColor, fontSize, fontWeight, mLeft}) => {
     return (<StyledHeading 
                 fontColor={fontColor}
                 fontSize={fontSize}
                 fontWeight={fontWeight}
+                mLeft={mLeft}
             >{children}</StyledHeading>);
 };
 

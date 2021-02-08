@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import Navbar from '../../Components/organisms/Navbar/Navbar';
 
 const Container = styled.div`
     width:100vw;
-    height:100vw;
+    max-height:100vw;
     font-size:62.5%;
     box-sizing:border-box;
     font-family: ${props => props.theme.fonts.raleway.name};
@@ -12,7 +13,10 @@ const Container = styled.div`
 `;
 
 const MainTemplate = ({children}) => (
-    <Container>{children}</Container>
+    <Container>
+        <Navbar />
+        {children}
+    </Container>
 );
 
 export default MainTemplate;

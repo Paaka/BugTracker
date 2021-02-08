@@ -11,6 +11,7 @@ const StyledParagraph = styled.p`
     padding:0;
     margin:0;
     cursor: ${({cursor})=> cursor ? cursor : 'default'};
+    text-align:${({textAlign})=> textAlign ? textAlign : 'start'};
 `;
 
 const Paragraph = (
@@ -19,12 +20,14 @@ const Paragraph = (
                     fontWeight,
                     fontColor,
                     marginLeft,
-                    cursor}
-                  ) => (<StyledParagraph 
+                    textAlign,
+                    cursor
+                  }) => (<StyledParagraph 
                             fontSize={fontSize}
                             fontWeight={fontWeight}
                             fontColor={fontColor}
                             marginLeft={marginLeft}
-                            cursor={cursor}>{children}</StyledParagraph>);
+                            cursor={cursor}
+                            textAlign={textAlign}> {children} </StyledParagraph>);
 
 export default Paragraph;

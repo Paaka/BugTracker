@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 
 const theme = {
     colors: {
-        powderWhite: "#FFFDF9",
+        white: "#FFFDF9",
         persianGreen: "#06B49A",
         btnBlue:"#6dabe4",
         lightBlue: "#AFDBD2",
@@ -35,7 +35,7 @@ const theme = {
         small: "1.4em",
         medium: "1.8em",
         large: "2.2em",
-        extraLarge: "2.8em"
+        extraLarge: "3em"
       }
 };
 
