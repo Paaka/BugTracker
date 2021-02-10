@@ -1,5 +1,8 @@
 import React, { useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
+import Routes from '../../../Routes/Routes';
+import FlexWrapper from '../../atoms/FlexWrapper/FlexWrapper';
+import StyledNavLink from '../../atoms/NavLink/NavLink';
 import Heading from '../../atoms/typography/Heading/Heading';
 import LinkWithoutStyling from '../../atoms/typography/LinkWithoutStyles/LinkWithoutStyling';
 
@@ -8,8 +11,8 @@ const Container = styled.div`
     height:7vh;
     background-image: linear-gradient(to right,#EB1931, #BF5082);
     display:grid;
-    grid-template-columns:40%, 60%;
-    align-content:center;
+    grid-template-columns:1fr 2fr;
+    align-items:center;
 `;
 
 
@@ -27,6 +30,9 @@ const Navbar = () => {
             mLeft="10px"
             >BugTracker🐞</Heading>
         </LinkWithoutStyling>
+        <FlexWrapper>
+            <StyledNavLink linkTo={Routes.projects}>Projects</StyledNavLink>
+        </FlexWrapper>
     </Container>
     );
 

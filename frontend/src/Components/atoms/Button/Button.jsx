@@ -10,9 +10,14 @@ const Button = styled.button`
     margin:${({margins})=> margins ? margins : 'none'};    
     transition: background-color 0.25s ease-in-out;
     cursor:pointer;
+    outline:none;
 
     :hover{
         background-color:#6da1e4;
+    }
+
+    :active{
+        background-color:#4C709F;
     }
 `;
 
