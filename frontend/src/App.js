@@ -8,6 +8,7 @@ import RegisterView from './Views/RegisterView/RegisterView';
 import MainView from './Views/MainView/MainView';
 import ProjectView from './Views/ProjectsView/ProjectView';
 import store from './Store/Store';
+import CreateProjectView from './Views/CreateProjectView/CreateProjectView';
 
 
 function App() {
@@ -27,6 +28,9 @@ function App() {
             </Route>
             <Route path={Routes.projects}>
                 <ProjectView />
+            </Route>
+            <Route path={Routes.create.newProject}>
+                <CreateProjectView />
             </Route>
           </Switch>
         </Router>
