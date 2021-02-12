@@ -6,6 +6,7 @@ const theme = {
         white: "#FFFDF9",
         persianGreen: "#06B49A",
         btnBlue:"#6dabe4",
+        btnBlueDark:"#4C709F",
         lightBlue: "#AFDBD2",
         onyx: "#36313D"
       },
