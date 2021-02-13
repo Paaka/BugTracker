@@ -7,6 +7,9 @@ import Heading from '../../Components/atoms/typography/Heading/Heading';
 import ShowFromLeftTemplate from '../../Templates/ShowFromLeftTemplate/ShowFromLeftTemplate';
 import Routes from '../../Routes/Routes';
 import FormInput from '../../Components/atoms/FormInput/FormInput';
+import ProjectTemplate from '../../Components/molecules/ProjectTemplate/ProjectTempate';
+import { useHistory } from 'react-router-dom';
+
 
 const Container = styled.div`
     width:30%;
@@ -24,16 +27,31 @@ const FormContainer = styled.div`
 
 const CreateProjectView = () => {
     const dispatch = useDispatch();
+    const history = useHistory();
     const [projectName, setProjectName] = useState('');
+    const [isProjectNameEmpty, setIsProjectNameEmpty] = useState(true);
+
+    const checkIfProjectNameIsEmpty = () =>{
+        if(projectName.length < 0){
+            setIsProjectNameEmpty(true);
+        }else{
+            setIsProjectNameEmpty(false);
+        }
+    }
 
     const setProjectNameHandler = e => {
         setProjectName(e.target.value);
+        checkIfProjectNameIsEmpty();
     };
+
+
 
     const createNewProjectHandler = () => {
         dispatch(CreateNewProject(projectName));
         setProjectName('');
-    }
+        setIsProjectNameEmpty(true);
+        history.push('/projects');
+    };
 
     return(
     <ShowFromLeftTemplate closePath={Routes.projects}>
@@ -41,7 +59,8 @@ const CreateProjectView = () => {
             <Heading fontWeight={500}>Create project:</Heading>
             <FormContainer>
             <FormInput label="Name" placeholder="Enter project name" val={projectName} onChangeFn={setProjectNameHandler}/>
-            <Button onClick={createNewProjectHandler}>Create Project</Button>
+            <ProjectTemplate />
+            <Button disabled={isProjectNameEmpty} onClick={createNewProjectHandler}>Create Project</Button>
             </FormContainer>
         </Container>
     </ShowFromLeftTemplate>
