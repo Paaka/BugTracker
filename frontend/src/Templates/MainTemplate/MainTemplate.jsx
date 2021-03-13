@@ -10,6 +10,7 @@ const Container = styled.div`
     font-family: ${props => props.theme.fonts.raleway.name};
     margin:0;
     padding:0;
+    position:relative;
 `;
 
 const MainTemplate = ({children}) => (

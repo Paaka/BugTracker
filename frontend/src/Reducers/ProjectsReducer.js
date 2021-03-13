@@ -1,4 +1,5 @@
 import * as Types from '../Actions/Types/Types';
+import Project from '../Models/Project';
 
 const initalState = {
     projects:[],
@@ -11,10 +12,7 @@ const projectReducer = (state = initalState, action) => {
                 ...state,
                 projects:[
                     ...state.projects,
-                    {
-                        id:1,
-                        projectName:action.payload.projectName,
-                    },
+                    new Project(action.payload.projectName, 'Basic', 'Mateusz Hartabus'),
                 ],
             }
         }

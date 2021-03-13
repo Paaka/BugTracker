@@ -8,7 +8,8 @@ const theme = {
         btnBlue:"#6dabe4",
         btnBlueDark:"#4C709F",
         lightBlue: "#AFDBD2",
-        onyx: "#36313D"
+        onyx: "#36313D",
+        borderGray:"#ccc"
       },
       fonts:{
         montserrat:{

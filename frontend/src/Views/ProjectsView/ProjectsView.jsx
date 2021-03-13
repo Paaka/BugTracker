@@ -6,6 +6,7 @@ import MainTemplate from '../../Templates/MainTemplate/MainTemplate';
 import Paragraph from '../../Components/atoms/typography/Paragraph/Paragraph';
 import Button from '../../Components/atoms/Button/Button';
 import LinkWithoutStyling from '../../Components/atoms/typography/LinkWithoutStyles/LinkWithoutStyling';
+import ProjectsList from '../../Components/organisms/ProjectsList/ProjectsList';
 
 const Container = styled.div`
     box-sizing:border-box;
@@ -23,7 +24,7 @@ const NoProjectsContainer = styled.div`
     justify-content:center;
 `
 
-const ProjectView = () => {
+const ProjectsView = () => {
     const projects = useSelector(state => state.projects);
     const {fontSizes, fontWeights} = useContext(ThemeContext);
 
@@ -41,10 +42,10 @@ const ProjectView = () => {
                     <LinkWithoutStyling to="/create/newProject">  
                         <Button>Create new Project</Button>
                     </LinkWithoutStyling>             
-                </NoProjectsContainer>) : <h1>XD</h1>}
+                </NoProjectsContainer>) : (<ProjectsList projects={projects}/>)}
             </Container>
         </MainTemplate>
     );
 }; 
 
-export default ProjectView;
+export default ProjectsView;

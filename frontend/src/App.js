@@ -6,9 +6,10 @@ import Routes from './Routes/Routes';
 import LoginView from './Views/LoginView/LoginView';
 import RegisterView from './Views/RegisterView/RegisterView';
 import MainView from './Views/MainView/MainView';
-import ProjectView from './Views/ProjectsView/ProjectView';
+import ProjectsView from './Views/ProjectsView/ProjectsView';
 import store from './Store/Store';
 import CreateProjectView from './Views/CreateProjectView/CreateProjectView';
+import ProjectView from './Views/ProjectView/ProjectView';
 
 
 function App() {
@@ -27,10 +28,13 @@ function App() {
                 <RegisterView />
             </Route>
             <Route path={Routes.projects}>
-                <ProjectView />
+                <ProjectsView />
             </Route>
             <Route path={Routes.create.newProject}>
                 <CreateProjectView />
+            </Route>
+            <Route path={Routes.projectWithUndefinedId}>
+                <ProjectView />
             </Route>
           </Switch>
         </Router>

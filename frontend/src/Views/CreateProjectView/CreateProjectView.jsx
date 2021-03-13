@@ -44,8 +44,6 @@ const CreateProjectView = () => {
         checkIfProjectNameIsEmpty();
     };
 
-
-
     const createNewProjectHandler = () => {
         dispatch(CreateNewProject(projectName));
         setProjectName('');
