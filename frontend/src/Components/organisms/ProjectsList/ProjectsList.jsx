@@ -9,6 +9,8 @@ import BtnIcon from '../../atoms/BtnIcon/BtnIcon';
 import StyledLink from '../../atoms/typography/StyledLink/StyledLink';
 import Routes from '../../../Routes/Routes';
 import FlexWrapper from '../../atoms/FlexWrapper/FlexWrapper';
+import LinkWithoutStyling from '../../atoms/typography/LinkWithoutStyles/LinkWithoutStyling';
+import Button from '../../atoms/Button/Button';
 
 const GridWrapper = styled.div`
     display:grid;
@@ -17,6 +19,13 @@ const GridWrapper = styled.div`
     border-bottom:2px solid #ccc;
     align-items:center;
 `;
+
+const ButtonFlexContainer = styled.div`
+    display:flex;
+    justify-content:center;
+    width:100%;
+    margin: 10px auto;
+`
 
 
 const ProjectsList = ({projects}) => {
@@ -44,6 +53,11 @@ const ProjectsList = ({projects}) => {
                     <Paragraph fontSize={fontSizes.medium}>{item.author}</Paragraph>
                 </GridWrapper>
            ))}
+        <ButtonFlexContainer>
+            <LinkWithoutStyling to={Routes.create.newProject}>
+                <Button>New project</Button>
+            </LinkWithoutStyling>
+        </ButtonFlexContainer>
     </div>
     );
 };

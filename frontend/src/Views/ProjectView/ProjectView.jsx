@@ -12,8 +12,7 @@ const ProjectView = () => {
 
     return(
         <MainTemplate>
-            <Sidebar projectId={projectId}>
-            </Sidebar>
+            <Sidebar projectId={projectId}/>
         </MainTemplate>
     );
 };

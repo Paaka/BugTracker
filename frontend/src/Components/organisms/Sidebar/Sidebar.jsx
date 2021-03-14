@@ -4,7 +4,10 @@ import { Redirect } from 'react-router-dom';
 import styled, {ThemeContext} from 'styled-components';
 import { ShowFromRight } from '../../../Animations/Animations';
 import Routes from '../../../Routes/Routes';
+import SidebarItem from '../../molecules/SidebarItems/SidebarItem/SidebarItem';
 import SidebarTitle from '../../molecules/SidebarItems/SidebarTitle/SidebarTitle';
+import returnSvg from '../../../Assets/SVG/return.svg';
+import addSvg from '../../../Assets/SVG/plus.svg';
 
 const Wrapper = styled.div`
     width:250px;
@@ -21,6 +24,9 @@ const SidebarContent = ({project}) => {
     return ( 
         <Wrapper borderColor={borderGray}>
             <SidebarTitle projectTitle={thisProject.name}/>
+            <SidebarItem icon={returnSvg} title="Go back" linkTo={Routes.projects} />
+            <hr/>
+            <SidebarItem icon={addSvg} title="Create" linkTo={Routes.create.newNotification}/>
         </Wrapper>);
 }
 

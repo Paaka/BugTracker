@@ -10,6 +10,7 @@ import ProjectsView from './Views/ProjectsView/ProjectsView';
 import store from './Store/Store';
 import CreateProjectView from './Views/CreateProjectView/CreateProjectView';
 import ProjectView from './Views/ProjectView/ProjectView';
+import CreateNotificationView from './Views/CreateNotificationView/CreateNotificationView';
 
 
 function App() {
@@ -35,6 +36,9 @@ function App() {
             </Route>
             <Route path={Routes.projectWithUndefinedId}>
                 <ProjectView />
+            </Route>
+            <Route exact path={Routes.create.newNotification}>
+                <CreateNotificationView/>
             </Route>
           </Switch>
         </Router>

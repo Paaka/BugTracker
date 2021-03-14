@@ -7,6 +7,7 @@ const Routes = {
     projectWithUndefinedId:'/project/:id',
     create:{
         newProject:'/create/newProject',
+        newNotification:'/create/newNotification',
     }
 }
 

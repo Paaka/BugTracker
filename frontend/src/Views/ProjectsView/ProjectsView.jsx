@@ -7,6 +7,7 @@ import Paragraph from '../../Components/atoms/typography/Paragraph/Paragraph';
 import Button from '../../Components/atoms/Button/Button';
 import LinkWithoutStyling from '../../Components/atoms/typography/LinkWithoutStyles/LinkWithoutStyling';
 import ProjectsList from '../../Components/organisms/ProjectsList/ProjectsList';
+import Routes from '../../Routes/Routes';
 
 const Container = styled.div`
     box-sizing:border-box;
@@ -39,7 +40,7 @@ const ProjectsView = () => {
                 (<NoProjectsContainer>
                     <Heading>You don't have any projects</Heading>
                     <Paragraph>Create new project in Bugtracker</Paragraph>
-                    <LinkWithoutStyling to="/create/newProject">  
+                    <LinkWithoutStyling to={Routes.create.newProject}>  
                         <Button>Create new Project</Button>
                     </LinkWithoutStyling>             
                 </NoProjectsContainer>) : (<ProjectsList projects={projects}/>)}

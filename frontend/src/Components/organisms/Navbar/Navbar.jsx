@@ -9,7 +9,7 @@ import LinkWithoutStyling from '../../atoms/typography/LinkWithoutStyles/LinkWit
 const Container = styled.div`
     width:100vw;
     height:7vh;
-    background-image: linear-gradient(to right,#EB1931, #BF5082);
+    background-color:#D51F06;
     display:grid;
     grid-template-columns:1fr 2fr;
     align-items:center;
