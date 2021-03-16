@@ -16,7 +16,7 @@ const StyledInput = styled.input`
     font-size:1.2em;
     min-width:300px;
     outline:none;
-    border:2px solid #aaa;
+    border:2px solid #ccc;
     border-radius:5px;
     transition:0.2s border ease-in;
 
@@ -43,6 +43,11 @@ const FormInput = ({label, placeholder,  val, onChangeFn}) => {
         setIsFocused(false);
     }
 
+    const onChangeHandler = e => {
+        onChangeFn(e.target.value);
+    }
+
+
     return(
     <Wrapper>
         <StyledLabel isFocused={isFocused}>{label}</StyledLabel>
@@ -52,7 +57,7 @@ const FormInput = ({label, placeholder,  val, onChangeFn}) => {
             value={val} 
             onFocus={onFocusHandler} 
             onBlur={onFocusOutHandler} 
-            onChange={onChangeFn} />
+            onChange={onChangeHandler} />
     </Wrapper>
     );
 };

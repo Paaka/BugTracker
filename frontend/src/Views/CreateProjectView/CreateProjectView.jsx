@@ -39,8 +39,8 @@ const CreateProjectView = () => {
         }
     }
 
-    const setProjectNameHandler = e => {
-        setProjectName(e.target.value);
+    const setProjectNameHandler = input => {
+        setProjectName(input);
         checkIfProjectNameIsEmpty();
     };
 

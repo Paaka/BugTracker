@@ -9,16 +9,22 @@ const Container = styled.div`
     border-bottom:2px solid #ddd;
     transition:all 0.2s ease-in;
     margin-top:2em;
+    background-color:${props => props.bgColor};
 
     :focus-within{
         border-bottom:2px solid blue;
     }
 `
 
-const MainInput = ({type, placeholder, icon}) => {
+const MainInput = ({type, placeholder, icon, value, updateFn}) => {
+
+    const onChangeHandler = e => {
+        updateFn(e.target.value);
+    };
+
     return(<Container>
             <DivImage bgIcon={icon} />
-            <StyledInput type={type} placeholder={placeholder}></StyledInput>
+            <StyledInput onChange={onChangeHandler} value={value} type={type} placeholder={placeholder}></StyledInput>
         </Container>);
 }
 

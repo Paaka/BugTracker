@@ -8,6 +8,7 @@ const StyledInput = styled.input`
     font-size:16px;
     font-family:${({theme})=> theme.fonts.raleway.name};
     font-weight:500;
+    background-color: transparent;
 `;
 
 export default StyledInput;
